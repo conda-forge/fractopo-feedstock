@@ -1,5 +1,5 @@
 {% set name = "fractopo" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 
 package:
@@ -8,13 +8,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fractopo-{{ version }}.tar.gz
-  sha256: 2ba896efcacc05360c6236204937d1b37c096a4b0f638aecad3c6711c5c5b494
+  sha256: ac877269a83fc93ad0159174c32c957078a0a416494ffbb779745d3ecbb431a0
 
 build:
   number: 0
   noarch: python
   entry_points:
-    - tracevalidate = fractopo.cli:tracevalidate
+    - tracevalidate = fractopo.cli:tracevalidate_click
+    - fractopo = fractopo.cli:app
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -46,6 +47,7 @@ test:
     - fractopo.analysis
   commands:
     - pip check
+    - fractopo --help
     - tracevalidate --help
   requires:
     - pip
