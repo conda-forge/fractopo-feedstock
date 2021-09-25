@@ -14,7 +14,8 @@ build:
   number: 0
   noarch: python
   entry_points:
-    - tracevalidate = fractopo.cli:tracevalidate
+    - tracevalidate = fractopo.cli:tracevalidate_click
+    - fractopo = fractopo.cli:app
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -46,6 +47,7 @@ test:
     - fractopo.analysis
   commands:
     - pip check
+    - fractopo --help
     - tracevalidate --help
   requires:
     - pip
