@@ -3,7 +3,7 @@ Simple test case for fractopo conda build.
 """
 
 import geopandas as gpd
-from fractopo import Network, Validation
+from fractopo import Network
 
 KB11_TRACES = gpd.read_file(
     "https://raw.githubusercontent.com/nialov/"
@@ -15,16 +15,17 @@ KB11_AREA = gpd.read_file(
 )
 NAME = "KB11"
 
-print("Validating KB11_traces")
-validation = Validation(traces=KB11_TRACES, area=KB11_AREA, name=NAME, allow_fix=True)
+# from fractopo import Validation
+# print("Validating KB11_traces")
+# validation = Validation(traces=KB11_TRACES, area=KB11_AREA, name=NAME, allow_fix=True)
 
-validated_traces = validation.run_validation()
+# validated_traces = validation.run_validation()
 
 # Create fractopo Network
 print("Creating fractopo Network out of validated KB11_traces.")
 kb11_network = Network(
     name=NAME,
-    trace_gdf=validated_traces,
+    trace_gdf=KB11_TRACES,
     area_gdf=KB11_AREA,
     truncate_traces=True,
     circular_target_area=False,
