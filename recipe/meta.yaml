@@ -40,6 +40,8 @@ requirements:
     - seaborn
     - shapely >=1.7,<1.8
     - typer >=0.3.2,<0.4.0
+    - pip:
+      - nialog
 
 test:
   imports:
