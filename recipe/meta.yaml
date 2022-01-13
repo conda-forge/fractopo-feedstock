@@ -46,7 +46,6 @@ test:
     - fractopo
     - fractopo.analysis
   commands:
-    - pip check
     - fractopo --help
     - tracevalidate --help
   requires:
