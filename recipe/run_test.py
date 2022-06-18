@@ -2,6 +2,9 @@
 Simple test case for fractopo conda build.
 """
 
+from tempfile import TemporaryDirectory
+from pathlib import Path
+
 import geopandas as gpd
 from fractopo import Network
 
@@ -22,7 +25,7 @@ NAME = "KB11"
 # validated_traces = validation.run_validation()
 
 # Create fractopo Network
-print("Creating fractopo Network out of validated KB11_traces.")
+print("Creating fractopo Network out of KB11_traces.")
 kb11_network = Network(
     name=NAME,
     trace_gdf=KB11_TRACES,
@@ -35,4 +38,12 @@ kb11_network = Network(
 
 print(kb11_network.parameters)
 
-kb11_network.plot_trace_lengths()
+with TemporaryDirectory() as tmp_dir:
+    tmp_dir_path = Path(tmp_dir)
+
+    # export_network_analysis runs a lot of the base Network
+    # analysis methods.
+    kb11_network.export_network_analysis(
+        output_path=tmp_dir_path,
+        include_contour_grid=False,
+    )
