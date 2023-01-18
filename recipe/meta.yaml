@@ -49,7 +49,6 @@ test:
     - fractopo --help
     - fractopo network --help
     - fractopo tracevalidate --help
-    - tracevalidate --help
   requires:
     - pip
 
