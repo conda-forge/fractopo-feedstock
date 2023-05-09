@@ -1,11 +1,11 @@
-About fractopo
-==============
+About fractopo-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fractopo-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/nialov/fractopo
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fractopo-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fracture Network Analysis
 
