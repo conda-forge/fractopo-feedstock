@@ -1,5 +1,5 @@
 {% set name = "fractopo" %}
-{% set version = "0.5.3" %}
+{% set version = "0.6.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fractopo-{{ version }}.tar.gz
-  sha256: 4eea868d7e82863c1e0dcc1a0b928c92f9c04fe670e21131f04871843d4e74cf
+  sha256: fbdc1d3bb8897bc2476cfc49e03784f85019a5a0faab6e4e30e5ea5814a0b172
 
 build:
   number: 0
@@ -25,18 +25,18 @@ requirements:
   run:
     - click
     - geopandas >=0.11.1,<1.0.0
-    - matplotlib-base
+    - matplotlib-base >=3.5.3
     - numpy
     - pandas >=1.3,<2.0.0
     - powerlaw
     - pygeos >=0.13.0,<1.0.0
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - python-ternary
     - rich >=11.0.0
     - scikit-learn
     - scipy >=1.9.1,<2.0.0
     - seaborn
-    - shapely >=1.8.0,<2.0.0
+    - shapely >=2.0.0,<3.0.0
     - typer >=0.4.0,<1.0.0
     - joblib >=1.2.0,<2.0.0
 
