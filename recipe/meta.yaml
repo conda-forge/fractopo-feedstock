@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fractopo-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fractopo-{{ version }}.tar.gz
   sha256: ab1b72ca24eb32ad72a4f832125306ddc3e9ca569d6e189a7415f4aa6270edf3
 
 build:
