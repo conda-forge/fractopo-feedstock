@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.9,<3.13
-    - poetry >=1.1,<2
+    - poetry-core >=1.1,<2
   run:
     - click
     - geopandas >=1.0.0
