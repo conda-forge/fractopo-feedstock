@@ -11,7 +11,7 @@ source:
   sha256: ab1b72ca24eb32ad72a4f832125306ddc3e9ca569d6e189a7415f4aa6270edf3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - fractopo = fractopo.__main__:APP
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9,<3.13
+    - python {{ python_min }}
     - poetry-core >=1.1,<2
   run:
     - click
@@ -29,7 +29,7 @@ requirements:
     - numpy >=1.26.0,<2.0.0
     - pandas >=1.3,<3.0.0
     - powerlaw
-    - python >=3.9,<3.13
+    - python >={{ python_min }},<3.13
     - python-ternary
     - rich >=11.0.0
     - scikit-learn
@@ -50,6 +50,7 @@ test:
     - fractopo tracevalidate --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/nialov/fractopo
