@@ -49,9 +49,15 @@ test:
     - fractopo --help
     - fractopo network --help
     - fractopo tracevalidate --help
+    - FRACTOPO_DISABLE_CACHE=1 pytest -v --doctest-modules .
   requires:
     - pip
     - python {{ python_min }}
+    - pytest
+  source_files:
+    - fractopo
+    - pyproject.toml
+
 
 about:
   home: https://github.com/nialov/fractopo
