@@ -1,5 +1,5 @@
 {% set name = "fractopo" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fractopo-{{ version }}.tar.gz
-  sha256: ef68197574b2366f70e4ee339ddf793c8489dc60358d2eb01fc01a00ca59ff08
+  sha256: 3620cd4d753fa4c8739217d85d6fc8bc82a363ad2591d705dfc0b6f2e549fe91
 
 build:
   number: 0
