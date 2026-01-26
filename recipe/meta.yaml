@@ -1,5 +1,5 @@
 {% set name = "fractopo" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fractopo-{{ version }}.tar.gz
-  sha256: 3620cd4d753fa4c8739217d85d6fc8bc82a363ad2591d705dfc0b6f2e549fe91
+  sha256: 30c90ef07987632519d9c56c8ed81ce144a1f4abe652bd104344f369874981b7
 
 build:
   number: 0
@@ -28,8 +28,8 @@ requirements:
     - matplotlib-base >=3.5.3
     - numpy >=1.26.0,<2.0.0
     - pandas >=1.3,<3.0.0
-    - powerlaw
-    - python >={{ python_min }},<3.13
+    - powerlaw >=1.4.6,<2.0.0
+    - python >={{ python_min }},<3.15
     - python-ternary
     - rich >=11.0.0
     - scikit-learn
